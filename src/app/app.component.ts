@@ -15,7 +15,9 @@ export class AppComponent {
     console.log(this.selectedButton + 'Clicked');
   }
 
-  onTouch(button: Number) {
-    this.selectedButton = Number(button)
-    console.log(this.selectedButton + 'Touched')}
+  onTouch(button: Number, event:TouchEvent) {
+    event.preventDefault();
+    this.selectedButton = Number(button);
+    console.log(this.selectedButton + 'Touched')
+  }
 }

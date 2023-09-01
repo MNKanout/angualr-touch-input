@@ -5,7 +5,7 @@
   <div>
     <button *ngFor="let button of buttons"
     (click)="onClick(button)"
-    (touchstart)="onTouch(button)">
+    (touchstart)="onTouch(button, $event)">
       {{button}}
     </button>
   </div>
