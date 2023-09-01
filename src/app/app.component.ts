@@ -10,7 +10,8 @@ export class AppComponent {
   buttons = [1,2,3];
   clickedButton: number | string = '';
 
-  onClick() {
+  onClick(button: Number) {
+    this.clickedButton = Number(button)
     console.log(this.clickedButton);
   }
 }
