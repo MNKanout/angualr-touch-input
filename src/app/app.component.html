@@ -4,7 +4,8 @@
   </div>
   <div>
     <button *ngFor="let button of buttons"
-    (click)="onClick(button)">
+    (click)="onClick(button)"
+    (touchstart)="onTouch(button)">
       {{button}}
     </button>
   </div>
