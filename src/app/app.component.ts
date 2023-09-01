@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'touch-input';
+  buttons = [1,2,3];
+  clickedButton: number | string = '';
 }
