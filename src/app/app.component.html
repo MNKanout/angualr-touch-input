@@ -1,7 +1,9 @@
 <div>
   <div>
-    <input type="text" [value]="selectedButton">
+    <input type="text" [value]="selectedButton"
+    (keydown)="onKeyDown($event)">
   </div>
+
   <div>
     <button *ngFor="let button of buttons"
     (click)="onClick(button)"
@@ -9,4 +11,5 @@
       {{button}}
     </button>
   </div>
+
 </div>
