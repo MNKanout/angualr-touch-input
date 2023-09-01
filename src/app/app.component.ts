@@ -20,4 +20,11 @@ export class AppComponent {
     this.selectedButton = Number(button);
     console.log(this.selectedButton + 'Touched')
   }
+
+  onKeyDown(event:KeyboardEvent){
+    if (this.buttons.includes(Number(event.key))){
+      this.selectedButton = Number(event.key);
+      console.log(event.key + 'Pressed')
+    }
+  }
 }
