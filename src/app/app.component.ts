@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'touch-input';
   buttons = [1,2,3];
-  clickedButton: number | string = '';
+  selectedButton: number | string = '';
 
   onClick(button: Number) {
-    this.clickedButton = Number(button)
-    console.log(this.clickedButton);
+    this.selectedButton = Number(button)
+    console.log(this.selectedButton + 'Clicked');
   }
 }
