@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'touch-input';
   buttons: string[] = ['1','2','3'];
   selectedButton: string = '';
+  serialNumber = '';
 
   onClick(button: string) {
     this.selectedButton = button
