@@ -7,23 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'touch-input';
-  buttons = [1,2,3];
-  selectedButton: number | string = '';
+  buttons: string[] = ['1','2','3'];
+  selectedButton: string = '';
 
-  onClick(button: Number) {
-    this.selectedButton = Number(button)
+  onClick(button: string) {
+    this.selectedButton = button
     console.log(this.selectedButton + 'Clicked');
   }
 
-  onTouch(button: Number, event:TouchEvent) {
+  onTouch(button: string, event:TouchEvent) {
     event.preventDefault();
-    this.selectedButton = Number(button);
+    this.selectedButton = button;
     console.log(this.selectedButton + 'Touched')
   }
 
   onKeyDown(event:KeyboardEvent){
-    if (this.buttons.includes(Number(event.key))){
-      this.selectedButton = Number(event.key);
+    if (this.buttons.includes(event.key)){
+      this.selectedButton = event.key;
       console.log(event.key + 'Pressed')
     }
   }
