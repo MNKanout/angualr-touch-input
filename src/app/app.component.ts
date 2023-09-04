@@ -31,6 +31,7 @@ export class AppComponent {
 
   onKeyDown(event:KeyboardEvent){
     if (this.buttons.includes(event.key)){
+      event.preventDefault();
       this.selectedButton = event.key;
       console.log(event.key + ' Pressed');
       this.updateSerialNumber();
