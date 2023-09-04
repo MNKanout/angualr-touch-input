@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'touch-input';
-  buttons: string[] = ['1','2','3'];
+  buttons: string[] = ['1','2','3','4','5','6','7','8','9','0'];
   selectedButton: string = '';
   serialNumber = '';
 
