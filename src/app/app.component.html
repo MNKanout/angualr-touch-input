@@ -1,17 +1,19 @@
-<div class="flex-container">
-    <mat-form-field>
-      <input matInput placeholder="Serial number"
-      [(ngModel)]="serialNumber"
-      (keydown)="onKeyDown($event)">
-    </mat-form-field>
+<div class="center-container">
+  <div>
+      <mat-form-field>
+        <input matInput placeholder="Serial number"
+        [(ngModel)]="serialNumber"
+        (keydown)="onKeyDown($event)">
+      </mat-form-field>
 
-  <mat-grid-list cols="3" rowHeight="75px">
-    <mat-grid-tile *ngFor="let button of buttons">
-      <button mat-flat-button
-      (click)="onClick(button)"
-      (touchstart)="onTouch(button, $event)">
-        {{button}}
-      </button>
-    </mat-grid-tile>
-  </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="75px">
+      <mat-grid-tile *ngFor="let button of buttons">
+        <button mat-flat-button
+        (click)="onClick(button)"
+        (touchstart)="onTouch(button, $event)">
+          {{button}}
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 </div>
